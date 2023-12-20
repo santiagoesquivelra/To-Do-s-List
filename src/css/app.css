@@ -1,0 +1,161 @@
+:root {
+    --black-russian-50: #ece8ff;
+    --black-russian-100: #ded5ff;
+    --black-russian-200: #c6b3ff;
+    --black-russian-300: #a886ff;
+    --black-russian-400: #9957ff;
+    --black-russian-500: #9230ff;
+    --black-russian-600: #950dff;
+    --black-russian-700: #9304fe;
+    --black-russian-800: #7507cc;
+    --black-russian-900: #5d109f;
+    --black-russian-950: #11031c;
+}
+
+*,
+:after,
+:before {
+    border: 0 solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--black-russian-50), var(--black-russian-900));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left,
+.right {
+    flex: 1;
+}
+
+.right {
+    background: rgba(255, 255, 255, 0.7);
+    /* Color blanco con opacidad 0.7 */
+    border-radius: 10px;
+    /* Sombra con desplazamiento 0,4px,8px y opacidad 0.2 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Position absolute para el posicionamiento de imagen */
+    /* position: absolute; */
+}
+
+.left h1,
+h2 {
+    text-align: center;
+}
+
+.left input {
+    display: block;
+    margin: 0 auto;
+}
+
+.right h1 {
+    margin: 30px 0px;
+    font-size: 40px;
+}
+
+.space {
+    margin: 5%;
+    padding: 10px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+    background-color: #ddd;
+    outline: none;
+    transition: background-color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+}
+
+/* Placeholder personalizado */
+.search-input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+/* Cambiar el fondo cuando el input está enfocado */
+.search-input:focus {
+    background-color: #fff;
+}
+
+.button-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    background-color: var(--black-russian-600);
+    outline: none;
+    transition: background-color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+}
+
+/* Posicionamiento relativo manejo de imagenes */
+
+.image img {
+    position: relative;
+    top: 30px;
+}
+
+
+/* Cambiar el fondo cuando el input está enfocado */
+.button-input:hover {
+    background-color: #fff;
+}
+
+.large-text {
+    font-size: 4em;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #ff3366, #00ccff); /* Cambia los colores del gradiente según tus preferencias */
+}
+
+.large-text h1 {
+    margin-bottom: 0px;
+}
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Agregamos transición para efecto de hover */
+    width: 50%;
+}
+
+.custom-list li:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}
+
+.hide {
+    text-align: center;
+    color: #11031c;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+}
