@@ -19,16 +19,24 @@
     box-sizing: border-box;
 }
 
+html {
+    background: linear-gradient(to bottom, var(--black-russian-50), var(--black-russian-900));
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100vh;
-    background: linear-gradient(to bottom, var(--black-russian-50), var(--black-russian-900));
+    height: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .layout {
@@ -80,7 +88,8 @@ h2 {
     width: 300px;
     background-color: #ddd;
     outline: none;
-    transition: background-color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+    transition: background-color 0.3s ease;
+    /* Agregamos transición para suavizar el cambio de color */
 }
 
 /* Placeholder personalizado */
@@ -100,9 +109,10 @@ h2 {
     border: none;
     border-radius: 15px;
     width: 150px;
-    background-color: var(--black-russian-600);
+    background-color: #fff;
     outline: none;
-    transition: background-color 0.3s ease; /* Agregamos transición para suavizar el cambio de color */
+    transition: background-color 0.3s ease;
+    /* Agregamos transición para suavizar el cambio de color */
 }
 
 /* Posicionamiento relativo manejo de imagenes */
@@ -115,7 +125,8 @@ h2 {
 
 /* Cambiar el fondo cuando el input está enfocado */
 .button-input:hover {
-    background-color: #fff;
+    background-color: var(--black-russian-600);
+    ;
 }
 
 .large-text {
@@ -123,7 +134,8 @@ h2 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(45deg, #ff3366, #00ccff); /* Cambia los colores del gradiente según tus preferencias */
+    background-image: linear-gradient(45deg, #ff3366, #00ccff);
+    /* Cambia los colores del gradiente según tus preferencias */
 }
 
 .large-text h1 {
@@ -135,18 +147,31 @@ h2 {
     padding: 0;
 }
 
-.custom-list li {
+.custom-list li p {
     background-color: #fff;
     padding: 15px;
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out; /* Agregamos transición para efecto de hover */
+    transition: transform 0.3s ease-in-out;
+    /* Agregamos transición para efecto de hover */
     width: 50%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .custom-list li:hover {
-    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+    transform: scale(1.05);
+    /* Efecto de escala al pasar el ratón */
+}
+
+.trash {
+    color: #5e0ea0;
+    background-color: transparent;
+}
+
+.trash span:hover {
+    color: #11031c !important;
 }
 
 .hide {

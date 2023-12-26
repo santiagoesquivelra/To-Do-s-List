@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import './css/HideTask.css';
 
-const HideTask = () => {
+const HideTask = (props) => {
     const [isVisible, setIsVisible] = useState(true);
 
     const toggleVisibility = () => {
@@ -12,7 +12,7 @@ const HideTask = () => {
     };
 
     return (
-        <div className={`hide-element ${isVisible ? 'visible' : 'hidden'}`}>
+        <div className={`hide-element ${isVisible ? 'visible' : ''}`}>
             <a className="toggle-button" onClick={toggleVisibility}>
                 <FontAwesomeIcon icon={isVisible ? faEyeSlash : faEye} />
                 Hide completed tasks
